@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Fernando Zachary Espino - Pàgina web</title>
+  <meta name="description" content="Pàgina web personal amb ofertes i formulari de contacte.">
+  <meta name="keywords" content="web, ofertes, contacte, grid, flexbox">
+  <meta name="author" content="Fernando Zachary Espino">
+  <!-- Full d'estils extern -->
+  <link rel="stylesheet" href="css/estil.css">
+</head>
+
+<body>
+  <!-- Contenidor central de la pàgina -->
+  <div class="pagina">
+
+    <!-- Capçalera: logo i menú -->
+    <header id="capcalera">
+      <a class="logo" href="#inici">LOGO</a>
+      <nav id="menu">
+        <a class="actiu" href="#inici">HOME PAGE</a>
+        <a href="#sobre-mi">ABOUT ME</a>
+        <a href="#ofertes">OFFERS</a>
+        <a href="#contacte">CONTACT</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Portada: imatge a l'esquerra i text a la dreta -->
+      <section id="inici">
+        <img src="img/portada.png" alt="Imatge de la portada">
+        <div class="portada-text">
+          <h1>[ Fernando Zachary Espino ]</h1>
+          <p>Breu descripció de la pàgina web</p>
+          <a class="boto" href="#ofertes">Compra</a>
+        </div>
+      </section>
+
+      <!-- Sobre mi: títol i imatge a l'esquerra, text i llista a la dreta -->
+      <section id="sobre-mi">
+        <article>
+          <h2>Lorem ipsum dolor sit amet</h2>
+          <div class="foto">
+            <img src="img/foto.png" alt="Imatge de la secció">
+          </div>
+        </article>
+        <article class="sobre-text">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc diam nisl,
+            blandit quis nulla nec, lobortis suscipit justo. Sed pharetra maximus eros.
+            Sed ut lectus dui. Aenean efficitur ut arcu eu pharetra. Sed vel tellus enim.
+            Integer sed lorem eu leo blandit porta. Proin dignissim vel leo non molestie.
+          </p>
+          <ol>
+            <li>Aenean sagittis lacinia tincidunt.</li>
+            <li>Aliquam ultricies tempor convallis.</li>
+            <li>Nullam a nulla eget felis ultrices accumsan quis non velit.</li>
+            <li>Proin eget ac justo suscipit dapibus et vitae odio.</li>
+            <li>Ut imperdiet ultrices quam.</li>
+          </ol>
+          <a class="boto" href="#contacte">Contacte</a>
+        </article>
+      </section>
+
+      <!-- Ofertes: quatre targetes en una quadrícula -->
+      <section id="ofertes">
+        <h2>What we offer</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc diam nisl,
+          blandit quis nulla nec, lobortis suscipit justo.
+        </p>
+        <div class="quadricula">
+          <article class="oferta oferta-1">
+            <img src="img/oferta1.png" alt="Oferta 1">
+            <h3>Oferta 1</h3>
+            <p>Vivamus eu augue tortor. Integer sed justo ornare.</p>
+          </article>
+          <article class="oferta oferta-2">
+            <img src="img/oferta2.png" alt="Oferta 2">
+            <h3>Oferta 2</h3>
+            <p>Vivamus eu augue tortor. Integer sed justo ornare.</p>
+          </article>
+          <article class="oferta oferta-3">
+            <img src="img/oferta3.png" alt="Oferta 3">
+            <h3>Oferta 3</h3>
+            <p>Vivamus eu augue tortor. Integer sed justo ornare.</p>
+          </article>
+          <article class="oferta oferta-4">
+            <img src="img/oferta4.png" alt="Oferta 4">
+            <h3>Oferta 4</h3>
+            <p>Vivamus eu augue tortor. Integer sed justo ornare.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Formulari de contacte -->
+      <section id="contacte">
+        <h2>Need a web?</h2>
+        <form action="#" method="post">
+
+          <!-- Columna esquerra: nom, email i descripció -->
+          <div class="columna">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" placeholder="Introdueix el nom">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Introdueix el correu electrònic">
+
+            <label for="descripcio">Descripció</label>
+            <textarea id="descripcio" name="descripcio"></textarea>
+          </div>
+
+          <!-- Columna dreta: telèfon, sexe i com m'ha conegut -->
+          <div class="columna">
+            <label for="telefon">Telèfon</label>
+            <input type="tel" id="telefon" name="telefon" placeholder="Introdueix el telèfon">
+
+            <fieldset>
+              <legend>Sexe</legend>
+              <div class="opcions-fila">
+                <label><input type="radio" name="sexe" value="home"> Home</label>
+                <label><input type="radio" name="sexe" value="dona"> Dona</label>
+                <label><input type="radio" name="sexe" value="altre"> Altre</label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Com has sabut de mi?</legend>
+              <div class="opcions-grid">
+                <label><input type="checkbox" name="coneixer" value="xarxes"> Xarxes Socials</label>
+                <label><input type="checkbox" name="coneixer" value="web"> Web</label>
+                <label><input type="checkbox" name="coneixer" value="curriculum"> Curriculum</label>
+                <label><input type="checkbox" name="coneixer" value="google"> Google</label>
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- Botó d'enviar -->
+          <div class="enviar">
+            <button class="boto" type="submit">Envia</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- Peu de pàgina: logo, enllaços i xarxes socials -->
+    <footer id="peu">
+      <a class="logo" href="#inici">LOGO</a>
+
+      <div class="llistes">
+        <ul>
+          <li>Política de cookies</li>
+          <li>Termes i condicions</li>
+          <li>Qui som</li>
+          <li>Blog</li>
+        </ul>
+        <ul>
+          <li>Ofertes</li>
+          <li>Categories</li>
+          <li>Best sellers</li>
+        </ul>
+      </div>
+
+      <div class="xarxes">
+        <a class="xarxa" href="#">f</a>
+        <a class="xarxa" href="#">e</a>
+        <a class="xarxa" href="#">r</a>
+        <a class="xarxa" href="#">n</a>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

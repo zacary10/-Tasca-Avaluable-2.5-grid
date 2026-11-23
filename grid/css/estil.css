@@ -1,0 +1,352 @@
+/* ==========================================================
+   Tasca 2.5 - Grid
+   Fitxer d'estils extern (estil.css)
+   Colors: blau clar #C8EEFF, blau botons #2B9AF0,
+           gris imatges #D1D1D1, gris formulari #E5E5E5
+   ========================================================== */
+
+/* Estil general: es treu el marge per defecte i es posa una font */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222222;
+  background-color: white;
+}
+
+/* Contenidor central de la pàgina (900px d'ample com al disseny) */
+.pagina {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Les imatges s'adapten al seu contenidor */
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- BOTONS ---------- */
+
+/* Botó en forma de píndola (enllaços i botó d'enviar) */
+.boto {
+  display: inline-block;
+  background-color: #2B9AF0;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 26px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ---------- CAPÇALERA I MENÚ (Flexbox) ---------- */
+
+#capcalera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px 0 15px;
+  height: 38px;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: black;
+  text-decoration: none;
+}
+
+/* Menú: enllaços un al costat de l'altre */
+#menu {
+  display: flex;
+  gap: 5px;
+}
+
+#menu a {
+  font-size: 12px;
+  color: #222222;
+  text-decoration: none;
+  padding: 11px 16px;
+}
+
+/* Enllaç de la pàgina actual (amb fons blau clar) */
+#menu a.actiu {
+  background-color: #C8EEFF;
+}
+
+/* ---------- PORTADA (Grid de 2 columnes) ---------- */
+
+#inici {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 405px;
+}
+
+/* Part dreta de la portada: fons blau i text centrat */
+.portada-text {
+  background-color: #C8EEFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.portada-text h1 {
+  font-size: 42px;
+  font-weight: normal;
+  margin: 0 0 40px 0;
+}
+
+.portada-text p {
+  font-size: 22px;
+  margin: 0 0 30px 0;
+}
+
+/* ---------- SOBRE MI (Grid de 2 columnes) ---------- */
+
+#sobre-mi {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+  padding: 35px 30px 50px 28px;
+}
+
+#sobre-mi h2 {
+  font-size: 34px;
+  font-weight: normal;
+  margin: 0 0 20px 0;
+  width: 80%;
+}
+
+/* Imatge de l'esquerra */
+.foto {
+  height: 240px;
+}
+
+/* Columna de la dreta: es baixa una mica per alinear amb el disseny */
+.sobre-text {
+  padding-top: 40px;
+  font-size: 12.5px;
+}
+
+.sobre-text p {
+  margin: 0 0 30px 0;
+  line-height: 1.2;
+}
+
+.sobre-text ol {
+  margin: 0 0 20px 0;
+  padding-left: 25px;
+  line-height: 1.2;
+}
+
+/* ---------- OFERTES (Grid de 3 columnes) ---------- */
+
+#ofertes {
+  background-color: #C8EEFF;
+  padding: 35px 56px 50px 56px;
+  text-align: center;
+}
+
+#ofertes h2 {
+  font-size: 32px;
+  font-weight: normal;
+  margin: 0 0 10px 0;
+}
+
+#ofertes > p {
+  font-size: 11px;
+  margin: 0 0 30px 0;
+}
+
+/* Quadrícula: 3 columnes iguals; les ofertes 2 i 3 ocupen 2 columnes */
+.quadricula {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 50px;
+  row-gap: 55px;
+}
+
+.oferta {
+  background-color: white;
+  text-align: left;
+}
+
+.oferta-2,
+.oferta-3 {
+  grid-column: span 2;
+}
+
+.oferta img {
+  height: 145px;
+}
+
+.oferta h3 {
+  font-size: 12px;
+  margin: 10px 12px 3px 12px;
+}
+
+.oferta p {
+  font-size: 11.5px;
+  margin: 0 12px 10px 12px;
+}
+
+/* ---------- FORMULARI (Grid de 2 columnes) ---------- */
+
+#contacte {
+  padding: 10px 56px 40px 56px;
+}
+
+#contacte h2 {
+  font-size: 32px;
+  margin: 15px 0 5px 0;
+}
+
+/* Contenidor gris amb cantonades molt arrodonides */
+form {
+  background-color: #E5E5E5;
+  border-radius: 70px;
+  padding: 35px 35px 40px 35px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+  row-gap: 15px;
+  font-size: 12px;
+}
+
+.columna {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 4px;
+}
+
+/* Camps de text amb vora fosca */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+  background-color: #E5E5E5;
+  border: 2px solid #222222;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 14px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+}
+
+form textarea {
+  height: 85px;
+  resize: none;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #5B5BD6;
+}
+
+/* Grups de radio i checkbox sense vora */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 14px 0;
+}
+
+legend {
+  padding: 0;
+  margin-bottom: 8px;
+}
+
+/* Opcions de sexe en fila (Flexbox) */
+.opcions-fila {
+  display: flex;
+  gap: 25px;
+}
+
+/* Opcions de "com has sabut de mi" en 2 columnes (Grid) */
+.opcions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 22px;
+}
+
+fieldset label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+/* Botó d'enviar centrat ocupant les 2 columnes */
+.enviar {
+  grid-column: span 2;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.enviar .boto {
+  width: 175px;
+}
+
+/* ---------- PEU DE PÀGINA (Flexbox) ---------- */
+
+#peu {
+  background-color: #C8EEFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px 60px 50px 60px;
+}
+
+#peu .logo {
+  margin-top: 15px;
+}
+
+/* Les dues llistes del peu, una al costat de l'altra */
+.llistes {
+  display: flex;
+  gap: 40px;
+  font-size: 10px;
+}
+
+.llistes ul {
+  margin: 0;
+  padding-left: 12px;
+  line-height: 21px;
+}
+
+/* Icones de xarxes socials (cercles negres) */
+.xarxes {
+  display: flex;
+  gap: 5px;
+  margin-top: 40px;
+}
+
+.xarxa {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+}
